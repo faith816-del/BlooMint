@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BlooMint - Customize Period Pack</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">BlooMint 💜</h1>
+      <nav>
+        <a href="index.html">Learn</a>
+        <a href="shop.html">Shop</a>
+        <a href="pack.html" class="active">Period Pack</a>
+        <a href="tracker.html">Track Periods</a>
+        <a href="doctor.html">Consult Doctor</a>
+        <a href="ngo.html">NGO Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Customize Pack Section -->
+    <section class="pack-section">
+      <h2>Customize Your Period Pack</h2>
+      <p class="muted">Pick the essentials you want inside your pack 💜</p>
+
+      <form class="pack-form">
+        <div class="pack-items">
+          <label><input type="checkbox" name="item" value="pads" checked /> Pads (20 pack)</label>
+          <label><input type="checkbox" name="item" value="panty" /> Period Panty</label>
+          <label><input type="checkbox" name="item" value="soap" /> Intimate Soap</label>
+          <label><input type="checkbox" name="item" value="towel" /> Towel (for intimate care)</label>
+        </div>
+
+        <!-- Add Pack to Cart button -->
+        <button type="button" class="btn add-to-cart" data-name="Custom Period Pack" data-price="500">
+          Add Pack to cart
+        </button>
+
+        <!-- Optional cart display on this page -->
+        <div id="cart-display"></div>
+      </form>
+    </section>
+
+    <!-- Video Section -->
+    <section class="pack-video">
+      <h2>Your Custom Period Pack</h2>
+      <video controls width="100%" height="auto" autoplay loop muted playsinline>
+        <source src="video/custom_pack.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </main>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+</body>
+</html>

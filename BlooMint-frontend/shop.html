@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BlooMint - Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">BlooMint 💜</h1>
+      <nav>
+        <a href="index.html">Learn</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="tracker.html">Track Periods</a>
+        <a href="doctor.html">Consult Doctor</a>
+        <a href="ngo.html">NGO Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="products-section">
+      <h2>Shop Sanitary Essentials</h2>
+      <p class="muted">Pads, liners, period underwear and eco-friendly options — choose what works for you.</p>
+<!-- Card display-->
+      <div id="shop-cart-display"></div>
+      <!-- Products Grid -->
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <article class="product-card">
+          <div class="product-info">
+          <img src="images/my-pad5.jpg" alt="Pads pack" class="product-img" />
+          <h3 class="product-name">Comfort max Pads - 20 pack</h3>
+          <p class="product-price">KSh 450</p>
+          <button class="add-to-cart" data-name="Comfort Pads" data-price="450">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card">
+          <div class="product-info">
+          <img src="images/my-pad10.jpg" alt="Liners" class="product-img" />
+          <h3 class="product-name">Daily Liners - 30 pack</h3>
+          <p class="product-price">KSh 150</p>
+          <button class="add-to-cart" data-name="Liners" data-price="150">Add to cart</button>
+        </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card">
+          <div class="product-info">
+          <img src="images/my-pad7.jpg" alt="Menstrual cup" class="product-img" />
+          <h3 class="product-name">Reusable Cup</h3>
+          <p class="product-price">KSh 800</p>
+          <button class="add-to-cart" data-name="Menstrual cup" data-price="800">Add to cart</button>
+        </div>
+        </article>
+
+         <!-- Product 4 -->
+<article class="product-card">
+  <div class="product-info">
+  <img src="images/my-pad18.jpg" alt="Tampons" class="product-img" />
+  <h3 class="product-name">Tampons - 16 pack</h3>
+  <p class="product-price">KSh 550</p>
+  <button class="add-to-cart" data-name="Tampons" data-price="550">Add to cart</button>
+  </div>
+</article>
+
+<!-- Product 5 -->
+<article class="product-card">
+  <div class="product-info">
+  <img src="images/my-pad6.jpg" alt="Period Panty" class="product-img" />
+  <h3 class="product-name">Reusable Period Panty</h3>
+  <p class="product-price">KSh 400</p>
+  <button class="add-to-cart" data-name="Reusable Period Panty" data-price="400">Add to cart</button>
+  </div>
+</article>
+
+<!-- Product 6 -->
+<article class="product-card">
+  <div class="product-info">
+  <video autoplay loop muted playsinline controls>
+    <source src="video/custom_pack.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <h3>Custom Period Pack</h3>
+  <p>Includes wipes, panty, pad bag, lip gloss, Dove products, and a pack of periods.</p>
+  <p class="product-price">KSh 1200</p>
+  <button class="add-to-cart" data-name="Custom Period Park" data-price="1200">Add to Cart</button>
+</div>
+</article>
+        <!-- Product  7 -->
+        <article class="product-card">
+          <div class="product-info">
+          <img src="images/my-pad8.jpg" alt="pad bag" class="product-img" />
+          <h3 class="product-name">pad bag</h3>
+          <p class="product-price">KSh 100</p>
+          <button class="add-to-cart" data-name="pad bag" data-price="100">Add to cart</button>
+          </div> 
+        </article>
+        <!-- Product 8 -->
+        <article class="product-card">
+          <div class="product-info">
+          <img src="images/my-pad15.jpg" alt="wipes" class="product-img" />
+          <h3 class="product-name">Sanitary Wipes - 10 pack</h3>
+          <p class="product-price">KSh 200</p>
+          <button class="add-to-cart" data-name="Sanitary Wipes" data-price="200">Add to cart</button>
+          </div>
+        </article>
+        <!-- Product 9 -->
+        <article class="product-card">
+          <div class="product-info">
+          <img src="images/my-pad16.jpg" alt="Dove essential set" class="product-img" />
+          <h3 class="product-name">Dove Essential Soap</h3>
+          <p class="product-price">KSh 1200</p>
+          <button class="add-to-cart" data-name="Dove Essential Soap" data-price="1200">Add to cart</button>
+          </div>
+        </article>
+        <!-- Product 10 -->
+        <article class="product-card">
+          <div class="product-info">
+          <img src="images/my-pad2.jpg" alt="Postpartum Undie" class="product-img" />
+          <h3 class="product-name">Postpartum Undie</h3>
+          <p class="product-price">KSh 800</p>
+          <button class="add-to-cart" data-name="Postpartum Undie" data-price="800">Add to cart</button>
+          </div>
+        </article>
+        <!-- Product 11 -->
+        <article class="product-card">
+          <div class="product-info">
+          <img src="images/my-pad17.jpg" alt="Soap Free wash" class="product-img" />
+          <h3 class="product-name">Soap Free Wash</h3>
+          <p class="product-price">KSh 500</p>
+          <button class="add-to-cart" data-name="Soap Free Wash" data-price="500">Add to cart</button>
+          </div>
+        </article>
+        <!-- Product 12 -->
+        <article class="product-card">
+          <div class="product-info">
+          <img src="images/my-pad 3.jpg" alt="BlooMint pack" class="product-img" />
+          <h3 class="product-name">BlooMint pack</h3>
+          <p class="product-price">KSh 650</p>
+          <button class="add-to-cart" data-name="BlooMint pack" data-price="650">Add to cart</button>
+          </div> 
+        </article>
+
+      </div>
+      <button id="placeOrderBtn" class="btn">Place Order</button> <!-- close products-grid -->
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  
+  <script>
+
+const placeOrderBtn = document.getElementById('placeOrderBtn');
+
+placeOrderBtn.addEventListener('click', () => {
+    // Get cart from localStorage
+    const shopCart = JSON.parse(localStorage.getItem('shopCart')) || [];
+
+    if (shopCart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+    }
+
+    // Prepare order data
+    const orderData = {
+        name: "Faith",           // replace with form input later if needed
+        email: "faith@example.com",
+        items: shopCart,         // send the actual cart items
+        order_id: Date.now()
+    };
+
+    // Send POST request to Flask backend
+    fetch('http://127.0.0.1:5000/add_order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(orderData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);           // show success message
+        localStorage.removeItem('shopCart'); // clear cart
+        displayShopCart();             // update cart display
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+</script> 

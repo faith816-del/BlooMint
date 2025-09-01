@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlooMint - Period Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="pack.html">Period Packs</a>
+        <a href="ngo.html">NGOs</a>
+        <a href="tracker.html">Tracker</a>
+        <a href="doctor.html">Doctors</a>
+    </nav>
+
+    <!-- Tracker Section -->
+    <section class="tracker-section">
+        <h1>Period Tracker</h1>
+        <form id="trackerForm">
+            <label for="lastPeriod">Last Period Date:</label>
+            <input type="date" id="lastPeriod" required>
+
+            <label for="cycleLength">Cycle Length (days):</label>
+            <input type="number" id="cycleLength" min="20" max="45" required>
+
+            <button type="submit">Calculate Next Period</button>
+        </form>
+
+        <div id="result"></div>
+    </section>
+
+    <script>
+        const form = document.getElementById('trackerForm');
+        const resultDiv = document.getElementById('result');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const lastPeriod = new Date(document.getElementById('lastPeriod').value);
+            const cycleLength = parseInt(document.getElementById('cycleLength').value);
+
+            // Next period
+            const nextPeriod = new Date(lastPeriod.getTime() + cycleLength*24*60*60*1000);
+
+            // Fertile window: day 12 to 16
+            const fertileStart = new Date(lastPeriod.getTime() + 12*24*60*60*1000);
+            const fertileEnd = new Date(lastPeriod.getTime() + 16*24*60*60*1000);
+
+            resultDiv.innerHTML = `
+                <p>Your next period is expected on <strong>${nextPeriod.toDateString()}</strong></p>
+                <p>Your fertile window is from <strong>${fertileStart.toDateString()}</strong> to <strong>${fertileEnd.toDateString()}</strong></p>
+            `;
+        });
+    </script src="app.js"></script>
+</body>
+</html>

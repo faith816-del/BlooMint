@@ -1,0 +1,500 @@
+/* 🌸 General / Global Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #fff0f5; /* Light pink */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 🌸 Header / Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* 🌸 Container for centering content */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* 🌸 Hero / Landing Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  line-height: 1.8;
+}
+
+.hero button {
+  padding: 12px 25px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.hero button:hover {
+  background-color: #ff1493;
+}
+
+/* 🌸 Education / Flip Cards Section */
+.education {
+  padding: 60px 20px;
+}
+
+.education h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Container for cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* space between cards */
+  justify-content: center;  /* center the row of cards */
+  max-width: 900px; /* optional limits how wide the cards spread */
+  margin: 0 auto; /* center the container on screen */
+}
+
+/* Individual card styling */
+.card {
+  flex: 1 1 250px;  /* minimun width of 250px, can grow if space allows */
+  max-width: 280px; /* prevents cards from growing too wide */
+  height: 350px; /* same height for front/back */
+  background-color: #ffe6f0;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-inner {
+  perspective: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;  /* match height of card */
+  border-radius: 12px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.card-back {
+  
+  transform: rotateY(180deg);
+  
+}
+.logo {
+  color: purple;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: green;
+}
+
+/* 🌸 Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to bottom right, #ffe6f0, #ffffff);
+}
+
+.hero h2 {
+  font-size: 40px;
+  color: purple;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;  /*restrict paragraph width*/
+  margin: 0 auto 30px auto; /*center horizontally with spacing below */
+  line-height: 1.6;
+  text-align: center; /*center text*/
+}
+
+.hero button {
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: green;
+}
+
+/* 🌸 Section Titles */
+h1 {
+  text-align: center;
+  margin: 30px 0 20px 0;
+  color: #ff1493;
+}
+
+h2 {
+  color: #ff69b4;
+}
+
+/* 🌸 Flip Cards / NGO / Doctor / Product Cards */
+.flip-card, .card, .ngo-card, .doctor-card, .product-card {
+  perspective: 1000px;
+  width: 250px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.flip-card-inner, .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.card:hover .card-inner,
+.card.is-flipped .card-inner,
+.card:focus-within .card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back, .card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.flip-card-front, .card-front {
+  background: linear-gradient(180deg,#fff0f6,#f8dbea);
+  color: #000;
+  font-weight: 700;
+}
+
+.flip-card-back, .card-back {
+  background: linear-gradient(180deg,#eaffea,#d9fdd3);
+  color: #4a2b1f;
+  transform: rotateY(180deg);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.card-front h3, .card-back p {
+  margin: 0;
+}
+
+/* 🌸 Card / Flip Card Images */
+.card-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* 🌸 Products Section / Shop */
+.products-section {
+  padding: 48px 0;
+}
+
+.products-section h2 {
+  color: purple;
+  margin-bottom: 6px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Product Images */
+.product-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Product Name */
+.product-card h3, .product-name {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #222;
+  text-align: center;
+}
+
+/* Product Price */
+.product-card p, .product-price {
+  color: #666;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Add to Cart Button */
+.product-card .add-to-cart, .btn.add-cart {
+  padding: 8px 12px;
+  margin-top: 10px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.product-card .add-to-cart:hover, .btn.add-cart:hover {
+  background-color: #d81b60;
+}
+
+/* Video inside Product Card */
+.product-card video {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+/* 🌸 Pack Section */
+.pack-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.pack-section h2 {
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+.pack-section .muted {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* 🌸 Pack Items (Checkboxes) */
+.pack-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pack-items label {
+  background-color: #ffe6f0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.pack-items input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+/* 🌸 Add to Cart Button */
+.pack-section .add-to-cart {
+  padding: 12px 25px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.pack-section .add-to-cart:hover {
+  background-color: #d81b60;
+}
+
+/* 🌸 Video Section */
+.pack-video {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.pack-video h2 {
+  margin-bottom: 20px;
+  color: #e91e63;
+}
+
+.pack-video video {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: block;
+  margin: 0 auto 10px;
+}
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #ff1493;
+}
+
+/* Tracker Result */
+#result {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #007e33;
+}
+
+#result p strong {
+  color: #00c853;
+}
+
+/* 🌸 Responsive */
+@media (max-width: 768px) {
+  nav { flex-direction: column; }
+  nav a { margin: 10px 0; }
+  .ngo-card, .doctor-card, .product-card, .flip-card { width: 90%; height: auto; }
+  .card-icon { width: 60px; height: 60px; margin-bottom: 10px; }
+}
+
+@media (max-width: 900px) {
+  .card { width: calc(50% - 16px); height: 220px; }
+  .education h2 { font-size: 28px; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 540px) {
+    .card { width: 100%; height: 200px; }
+    .education h2 { font-size: 24px; }
+    .products-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+  .card {
+    flex: 1 1 90%;   /* one card per row on very small screens */
+  }
+}
+.doctor-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.doctor-section h1 {
+  margin-bottom: 40px;
+  color: #ff69b4;
+}
+
+.doctor-section .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 900px; /* keeps cards from spreading too wide */
+  margin: 0 auto;
+}
+
+.flip-card {
+  flex: 1 1 250px;
+  max-width: 280px;
+  height: 350px; /* matches front/back */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
